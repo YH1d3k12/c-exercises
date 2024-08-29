@@ -51,11 +51,20 @@ main() {
 	printf("Relatorio dos Alunos");
 	printf("-------------------------------\n");
 	for (int i = 0; i < TAM; i++) {
-		printf("Nome do Aluno: %s\n", aluno_estruturas[i].nome);
-		printf("RA: %d\n", aluno_estruturas[i].ra);
-		printf("Serie: %d\n", aluno_estruturas[i].serie);
-		printf("Curso: %s\n", aluno_estruturas[i].curso);
+		print_aluno(
+			aluno_estruturas[i].nome, 
+			aluno_estruturas[i].ra,
+			aluno_estruturas[i].serie,
+			aluno_estruturas[i].curso
+		);
 		printf("-------------------------------\n");
 	}
 	system("PAUSE");
+}
+
+void print_aluno(char nome[], int ra, int serie, char curso[]) {
+	printf("Nome do Aluno: %s\n", nome);
+	printf("RA: %d\n", ra);
+	printf("Serie: %d\n", serie);
+	printf("Curso: %s\n", curso);
 }
